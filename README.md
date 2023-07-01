@@ -12,7 +12,7 @@
 - [Features](#features)
 - [Setup](#setup)
 - [Development-requirement](#Development-requirement)
-- [Technologies used](#Technologiesused)
+- [Technologies_used](#Technologies_used)
 - [Contacts Info](#ContactsInfo)
 - [License](#license)
 
@@ -30,7 +30,7 @@ The Flatdango Movie Theater provides the following features:
 
 ## Setup
 
-To run Flatdango Movie TheaterApp locally, follow these steps:
+To run Flatdango Movie App locally, follow these steps:
 
 
 #### You need to have vs-code, git installed in your machine, db.json server installed and postman
