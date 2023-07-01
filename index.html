@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flatdango</title>
+  <title>Movie App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Flatdango</h1>
-  </header>
-  <main>
-    <aside>
+  <div class="container">
+    <!-- Film List -->
+    <div class="film-list">
+      <h2>Films List</h2>
       <ul id="films"></ul>
-    </aside>
-    <section id="movie-details">
-      <div id="movie-poster"></div>
-      <h2 id="movie-title"></h2>
-      <p id="movie-runtime"></p>
-      <p id="movie-showtime"></p>
-      <p id="movie-tickets"></p>
-      <button id="buy-ticket-btn">Buy Ticket</button>
-    </section>
-  </main>
-  <script src="script.js"></script>
+    </div>
+    
+    <!-- Movie Details -->
+    <div class="movie-details">
+      <div id="movie-poster" class="movie-poster"></div>
+      <div class="movie-info">
+        <h2 id="movie-title"></h2>
+        <p id="movie-runtime"></p>
+        <p id="movie-showtime"></p>
+        <p id="movie-tickets"></p>
+        <button id="buy-ticket-btn">Buy Ticket</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Link your JavaScript file -->
 </body>
 </html>
