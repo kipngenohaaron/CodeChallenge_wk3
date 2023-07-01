@@ -35,7 +35,7 @@ To run Flatdango Movie TheaterApp locally, follow these steps:
 
 #### You need to have vs-code, git installed in your machine, db.json server installed and postman
 
-1. git clone https://github.com/kipngenohaaron/Flatdango_Movie_Theater.git
+1. git clone https://github.com/kipngenohaaron/CodeChallenge_wk3.git
 2. git add .
 3. git commit -m "first commit"
 4. git push origin master
@@ -54,7 +54,6 @@ To run Flatdango Movie TheaterApp locally, follow these steps:
 ## Contact Info.
 
 ### For more information you can reach out; Email: kipngenohaaron@gmail.com
-- 0724828197
 #### 0724279400 / 0724828197 / 0101121100
 ## LInk to live 
 
