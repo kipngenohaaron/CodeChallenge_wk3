@@ -8,10 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const movieShowtime = document.getElementById("movie-showtime");
   const movieTickets = document.getElementById("movie-tickets");
   const buyTicketBtn = document.getElementById("buy-ticket-btn");
-  const MovieDetails = document.getElementById("movie-details");
+  const movieDetails = document.getElementById("movie-details"); // Corrected ID name
 
   // Fetch films data
-
   fetch("/films")
     .then(response => response.json())
     .then(data => {
