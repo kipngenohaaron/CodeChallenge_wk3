@@ -1,4 +1,4 @@
-# Flatdango Movie 
+# Flatdango Movie App
 
 ## Author - Kipngenoh Aaron Rotich
 
