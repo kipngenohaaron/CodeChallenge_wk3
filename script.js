@@ -10,32 +10,31 @@ document.addEventListener("DOMContentLoaded", function() {
   const buyTicketBtn = document.getElementById("buy-ticket-btn");
 
   // Fetch films data
+
   fetch("/films")
     .then(response => response.json())
-    .then(films => {
-      // Populate films list
+    .then(data => {
+      const films = data.films;
       films.forEach(film => {
         const li = document.createElement("li");
         li.className = "film-item";
         li.textContent = film.title;
-        li.addEventListener("click", () => showMovieDetails(film)); // Add click event listener to show movie details
+        li.addEventListener("click", () => showMovieDetails(film));
         filmsList.appendChild(li);
       });
 
-      // Show details of the first film
       showMovieDetails(films[0]);
     })
     .catch(error => console.error(error));
 
-  // Function to show movie details
   function showMovieDetails(film) {
-    moviePoster.style.backgroundImage = `url(${film.poster})`; // Set movie poster background image
-    movieTitle.textContent = film.title; // Set movie title
-    movieRuntime.textContent = `Runtime: ${film.runtime} min`; // Set movie runtime
-    movieShowtime.textContent = `Showtime: ${film.showtime}`; // Set movie showtime
-    movieTickets.textContent = `Tickets available: ${film.capacity - film.tickets_sold}`; // Calculate and set available tickets
+    moviePoster.style.backgroundImage = `url(${film.poster})`;
+    movieTitle.textContent = film.title;
+    movieRuntime.textContent = `Runtime: ${film.runtime} min`;
+    movieShowtime.textContent = `Showtime: ${film.showtime}`;
+    movieTickets.textContent = `Tickets available: ${film.capacity - film.tickets_sold}`;
 
-    buyTicketBtn.disabled = film.tickets_sold >= film.capacity; // Disable buy ticket button if sold out
-    buyTicketBtn.textContent = film.tickets_sold >= film.capacity ? "Sold Out" : "Buy Ticket"; // Set button text based on availability
+    buyTicketBtn.disabled = film.tickets_sold >= film.capacity;
+    buyTicketBtn.textContent = film.tickets_sold >= film.capacity ? "Sold Out" : "Buy Ticket";
   }
 });
