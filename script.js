@@ -1,40 +1,55 @@
-// Execute the code when the DOM content is loaded
-document.addEventListener("DOMContentLoaded", function() {
-  // Get DOM elements
-  const filmsList = document.getElementById("films");
-  const moviePoster = document.getElementById("movie-poster");
-  const movieTitle = document.getElementById("movie-title");
-  const movieRuntime = document.getElementById("movie-runtime");
-  const movieShowtime = document.getElementById("movie-showtime");
-  const movieTickets = document.getElementById("movie-tickets");
-  const buyTicketBtn = document.getElementById("buy-ticket-btn");
-  const movieDetails = document.getElementById("movie-details"); // Corrected ID name
+document.addEventListener('DOMContentLoaded', function () {
+  const filmsMenu = document.getElementById('films');
+  const movieDetails = document.getElementById('movie-details');
+  const posterElement = document.getElementById('movie-poster');
+  const titleElement = document.getElementById('movie-title');
+  const runtimeElement = document.getElementById('movie-runtime');
+  const showtimeElement = document.getElementById('movie-showtime');
+  const ticketsElement = document.getElementById('movie-tickets');
+  const buyTicketButton = document.getElementById('buy-ticket-btn');
 
-  // Fetch films data
-  fetch("/films")
-    .then(response => response.json())
-    .then(data => {
-      const films = data.films;
-      films.forEach(film => {
-        const li = document.createElement("li");
-        li.className = "film-item";
-        li.textContent = film.title;
-        li.addEventListener("click", () => showMovieDetails(film));
-        filmsList.appendChild(li);
+  const API_URL = 'http://localhost:3000/films';
+
+  let selectedFilm = null;
+
+  // Fetch the movie list from the server
+  fetch(API_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      data.films.forEach((movie) => {
+        const filmItem = document.createElement('li');
+        filmItem.classList.add('film-item');
+        filmItem.textContent = movie.title;
+        filmsMenu.appendChild(filmItem);
+
+        filmItem.addEventListener('click', () => {
+          showMovieDetails(movie);
+        });
       });
 
-      showMovieDetails(films[0]);
-    })
-    .catch(error => console.error(error));
+      // Show details of the first movie by default
+      if (data.films.length > 0) {
+        showMovieDetails(data.films[0]);
+      }
+    });
 
-  function showMovieDetails(film) {
-    moviePoster.style.backgroundImage = `url(${film.poster})`;
-    movieTitle.textContent = film.title;
-    movieRuntime.textContent = `Runtime: ${film.runtime} min`;
-    movieShowtime.textContent = `Showtime: ${film.showtime}`;
-    movieTickets.textContent = `Tickets available: ${film.capacity - film.tickets_sold}`;
+  function showMovieDetails(movie) {
+    selectedFilm = movie;
+    posterElement.style.backgroundImage = `url(${movie.poster})`;
+    titleElement.textContent = movie.title;
+    runtimeElement.textContent = `Runtime: ${movie.runtime} minutes`;
+    showtimeElement.textContent = `Showtime: ${movie.showtime}`;
+    ticketsElement.textContent = `Available Tickets: ${movie.capacity - movie.tickets_sold}`;
 
-    buyTicketBtn.disabled = film.tickets_sold >= film.capacity;
-    buyTicketBtn.textContent = film.tickets_sold >= film.capacity ? "Sold Out" : "Buy Ticket";
+    buyTicketButton.disabled = movie.tickets_sold >= movie.capacity;
   }
+
+  buyTicketButton.addEventListener('click', () => {
+    if (selectedFilm) {
+      // Simulate buying a ticket by incrementing the tickets_sold count
+      selectedFilm.tickets_sold++;
+      ticketsElement.textContent = `Available Tickets: ${selectedFilm.capacity - selectedFilm.tickets_sold}`;
+      buyTicketButton.disabled = selectedFilm.tickets_sold >= selectedFilm.capacity;
+    }
+  });
 });
