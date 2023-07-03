@@ -1,10 +1,10 @@
-# Flatdango Movie App
+# Flatdango Movie Theatre App
 
 ## Author - Kipngenoh Aaron Rotich
 
 ## Project Description
 
-#### Flatdango Movie App functions in a through which can see the films list and its detailed description. 
+#### Flatdango Movie Theatre is a modern cinema in the city, offering diverse movie genres, state-of-the-art facilities, comfortable seating, and online ticket booking for an immersive and convenient movie-watching experience.. 
 #### It also enables one to book a movie and shows the number of tickets remaining.
 
 ## Table of Contents
@@ -30,7 +30,7 @@ The Flatdango Movie Theater provides the following features:
 
 ## Setup
 
-To run Flatdango Movie App locally, follow these steps:
+To run Flatdango Movie Theatre App locally, follow these steps:
 
 
 #### You need to have vs-code, git installed in your machine, db.json server installed and postman
