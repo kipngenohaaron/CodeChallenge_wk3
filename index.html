@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flatdango Movie Theater</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Flatdango</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="films-menu">
-      <h2>Movie List</h2>
+  <header>
+    <h1>Flatdango</h1>
+  </header>
+  <main>
+    <aside>
       <ul id="films"></ul>
-    </div>
-    <div class="movie-details" id="movie-details">
-      <img src="" alt="Movie Poster" id="poster">
-      <h2 id="title"></h2>
-      <p id="runtime"></p>
-      <p id="showtime"></p>
-      <p id="tickets"></p>
-      <button id="buyTicket" disabled>Buy Ticket</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
+    </aside>
+    <section id="movie-details">
+      <div id="movie-poster"></div>
+      <h2 id="movie-title"></h2>
+      <p id="movie-runtime"></p>
+      <p id="movie-showtime"></p>
+      <p id="movie-tickets"></p>
+      <button id="buy-ticket-btn">Buy Ticket</button>
+    </section>
+  </main>
+  <script src="./script.js"></script>
 </body>
 </html>
