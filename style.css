@@ -4,8 +4,8 @@ body {
 }
 
 header {
-  background-color: #331d09;
-  color: #fff;
+  background-color: #f79d49;
+  color: #050b4f;
   padding: 10px;
   text-align: center;
   
@@ -34,7 +34,6 @@ aside h2 {
   
 }
 
-  
 section {
   flex: 2;
   padding: 20px;

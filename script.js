@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Populate films list
       films.forEach(film => {
         const li = document.createElement("li");
-        li.className = "film-item";
+        // li.className = "film-item";
         li.textContent = film.title;
         li.addEventListener("click", () => showMovieDetails(film));
         filmsList.appendChild(li);
