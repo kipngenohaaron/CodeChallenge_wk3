@@ -1,10 +1,10 @@
-# Flatdango Movie Theatre App
+# Flatdango Movie App
 
 ## Author - Kipngenoh Aaron Rotich
 
 ## Project Description
 
-#### Flatdango Movie Theatre is a modern cinema in the city, offering diverse movie genres, state-of-the-art facilities, comfortable seating, and online ticket booking for an immersive and convenient movie-watching experience.. 
+#### Flatdango Movie App is a modern cinema in the city, offering diverse movie genres, state-of-the-art facilities, comfortable seating, and online ticket booking for an immersive and convenient movie-watching experience.. 
 #### It also enables one to book a movie and shows the number of tickets remaining.
 
 ## Table of Contents
@@ -35,7 +35,7 @@ To run Flatdango Movie Theatre App locally, follow these steps:
 
 #### You need to have vs-code, git installed in your machine, db.json server installed and postman
 
-1. git clone https://github.com/kipngenohaaron/CodeChallenge_wk3.git
+1. git clone https://github.com/kipngenohaaron/Flatdango_Movie_App.git
 2. git add .
 3. git commit -m "first commit"
 4. git push origin master
