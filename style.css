@@ -17,15 +17,15 @@ main {
 aside {
   flex: 1;
   padding: 20px;
-  background-color: #db6a6a;
+  background-color: #f2ebeb;
   border-radius: 5px;
 }
 aside h2 {
   text-align: center;
-  color: #2737e3;
+  color: #e32782;
 }
 #films li {
-  background: white;
+  background: rgb(142, 252, 7);
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
