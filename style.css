@@ -31,8 +31,10 @@ aside h2 {
   padding: 10px;
   margin: 5px;
   cursor: pointer;
+  
 }
 
+  
 section {
   flex: 2;
   padding: 20px;
